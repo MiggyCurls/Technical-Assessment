@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "FsGbnHvyr2Z3rF+80Y2Wsr9J/jbq/upRP89UucIF8Sw=",
+  "Source": "ReceiptReimbursementApi",
+  "BasePath": "_content/ReceiptReimbursementApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
