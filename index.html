@@ -19,25 +19,73 @@
                     <textarea id="description" name="description" rows="4" required></textarea>
 
                     <label for="receipt">Upload Receipt</label>
-                    <input type="file" id="receipt" name="receipt" accept=".png,.jpg,.jpeg,.pdf" required>
+                    <input type="file" id="receipt" name="ReceiptFile" accept=".png,.jpg,.jpeg,.pdf" required>
 
                     <button type="submit">Submit</button>
                 </form>
-            <div id="responseMessage"></div>
+            <div id="status"></div>
         </div>
         <script>
-            document.getElementById("receiptForm").addEventListener("submit", async function(event) {
+            document.getElementById('receiptForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form); // Automatically collects all form inputs
+
+    try {
+        const response = await fetch('http://localhost:5105/api/receipts/submit', {
+            method: 'POST',
+            body: formData // Send as multipart/form-data
+        });
+
+        const resultText = await response.text();
+
+        if (response.ok) {
+            document.getElementById('status').textContent = 'Receipt submitted successfully!';
+            form.reset();
+        } else {
+            document.getElementById('status').textContent = `Error: ${resultText}`;
+        }
+    } catch (err) {
+        document.getElementById('status').textContent = `Request failed: ${err}`;
+    }
+});
+            /*
+            document.getElementById('receiptForm').addEventListener('submit', async (event) => {
                 event.preventDefault();
 
-                const formData = new FormData(this);
-                const response = await fetch('http://localhost:5000/api/receipts',{
-                    method:'POST',
-                    body: formData
-                });
+                const form = event.target;
+                const date = form.date.value;
+                const amount = parseFloat(form.amount.value);
+                const description = form.description.value;
+                const file = form.file.files[0];
 
-                const result = await response.text();
-                document.getElementById("responseMessage").textContent = result;
-            });
+                const payload = {
+                    date: date,
+                    amount: amount,
+                    description: description,
+                    filePath: file ? file.name : null
+                };
+
+                try {
+                    const response = await fetch('http://localhost:5105/api/receipts', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    if (response.ok){
+                        document.getElementById('status').textContent = 'Receipt submitted successfully!';
+                        form.reset();
+                    } else {
+                        const error = await response.text();
+                        document.getElementById('status').textContent = `Error: ${error}`;
+                    }
+                } catch(err){
+                    document.getElementById('status').textContent = `Request failed: ${err}`;
+                }
+            });*/
         </script>
     </body>
 </html>

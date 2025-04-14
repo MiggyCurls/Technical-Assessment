@@ -16,8 +16,16 @@ namespace ReceiptReimbursementApi.Controllers
             _context = context;
             _environment = environment;
         }
-
+/*
         [HttpPost]
+        public IActionResult PostReceipt([FromBody] object payload)
+        {
+            Console.WriteLine("Received payload: ");
+            Console.WriteLine(payload?.ToString());
+            return Ok();
+        }
+        */
+        [HttpPost("submit")]
         public async Task<IActionResult> Submit([FromForm] ReceiptFormModel form)
         {
             if (form.ReceiptFile == null || form.ReceiptFile.Length == 0)

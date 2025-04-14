@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReceiptReimbursementApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb852f6642e6be2ac2711029f0680afc9fbac806")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f8d2dacae1d6fa71c7bec36fa05a09d8c86400f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReceiptReimbursementApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReceiptReimbursementApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
