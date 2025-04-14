@@ -152,3 +152,6 @@ C:\Users\migue\Code\Iowa\ReceiptReimbursementApi\obj\Debug\net9.0\refint\Receipt
 C:\Users\migue\Code\Iowa\ReceiptReimbursementApi\obj\Debug\net9.0\ReceiptReimbursementApi.pdb
 C:\Users\migue\Code\Iowa\ReceiptReimbursementApi\obj\Debug\net9.0\ReceiptReimbursementApi.genruntimeconfig.cache
 C:\Users\migue\Code\Iowa\ReceiptReimbursementApi\obj\Debug\net9.0\ref\ReceiptReimbursementApi.dll
+C:\Users\migue\Code\Iowa\ReceiptReimbursementApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\migue\Code\Iowa\ReceiptReimbursementApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\migue\Code\Iowa\ReceiptReimbursementApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

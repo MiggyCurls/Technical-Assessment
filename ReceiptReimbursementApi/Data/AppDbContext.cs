@@ -7,6 +7,6 @@ namespace ReceiptReimbursementApi.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
 
-        public DbSet<ReceiptSubmission> Receipts {get; set;}
+        public DbSet<ReceiptSubmission> Receipts { get; set; }
     }
 }
