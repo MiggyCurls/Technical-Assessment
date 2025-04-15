@@ -1,2 +1,19 @@
 # Technical-Assessment
 Technical Assessment for the University of Iowa due at midnight April 14th
+
+Instructions on how to run application:
+In order to run the file you must first have the following downloaded and installed on your computer: .NET SDK (latest version) and SwaggerUI. I also installed a VSCode extension called SQLite Viewer to help view the receipts.db.
+After installing, with the files locally available, in your terminal (I am running Powershell) execute the command: dotnet run --project ReceiptReimbursementApi. Now that the backend is up and ready to receive any requests sent from Index.HTML, open up the Index.HTML file and enter the appropriate data into each field and click the submit button. After waiting a few seconds, the fields should disappear and you should hopefully see "Receipt submitted successfully!"
+
+
+Number of estimated hours for project: 10 hours.
+Actual time spent on project: 12 hours.
+Explanation: I have done something similar to this project in the past called "LoginProject" where I worked both on the frontend and the backend to receive HTTP requests contain form submissions. One key differences between that project and this project being that I used Node.js and Express.js for that project as opposed to utilizing a completely new language (C#) to use .NET Core Web API. Another key difference being that in the other project, I did not store the submissions in a database and instead stored it as a text file in JSON format (data itself was encrypted with hashing+salting algorithms). I would be more comfortable working in a framework I am familiar with, but overall I would like to take this project as a learning moment and grow professionally for it.
+
+Tech stack:
+ FRONTEND/BACKEND used HTML, CSS, Javascript, .NET Core Web API, Swagger, SQLite. I used the frontend HTML, CSS, and Javascript as I was familiar with using such tools/technologies to send form submissions to the back so I stuck with something I already knew to be safe. On the backend, I used .NET Core WebAPI, Swagger, and SQLite as I saw those were preferred by whoever will be assessing the project; I understood that SwaggerUI could help to visualize how exactly the backend was receiving data from the frontend. 
+
+ Comments:
+    I made several assumptions in the implementation of this project, one being that I would only implement the core functionalities of the project. This would mean that I would not explore any edge cases and assume data being sent over would be correct every single time. Of course, if given more time I would adjust the codebase to explore edge cases and human error for completeness/accuracy. Another assumption made would be that duplicate entries would be allowed in the database. I came across several problems when putting this project together and most happened on the backend due to my knowledge of C# being limited. One problem was understanding the fact that I would need a controller to handle user requests since this would be a simple MVC architecture; setting that up took a while and resulted in a few bugs being carried over to the point where the model binding kept failing on me. I fixed that problem by realizing that I had to change the way the controller was interacting with the model. I would like the reader to notice that I did spend time on the styling of the project even though it adds no functionality; I believe that the UI should not be barebones and that each project should also put in an effort on the UI part.
+
+  This project has helped me understand more about a full stack project and the level of effort that gets put into web applications that we interact with on a daily basis. I will take this assessment as a learning experience as I learned to play around with a completely new language and framework, thank you.
