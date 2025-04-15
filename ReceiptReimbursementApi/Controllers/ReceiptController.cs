@@ -16,15 +16,8 @@ namespace ReceiptReimbursementApi.Controllers
             _context = context;
             _environment = environment;
         }
-/*
-        [HttpPost]
-        public IActionResult PostReceipt([FromBody] object payload)
-        {
-            Console.WriteLine("Received payload: ");
-            Console.WriteLine(payload?.ToString());
-            return Ok();
-        }
-        */
+
+        //Receive HTTP request "submit"
         [HttpPost("submit")]
         public async Task<IActionResult> Submit([FromForm] ReceiptFormModel form)
         {
@@ -49,13 +42,13 @@ namespace ReceiptReimbursementApi.Controllers
                 Description = form.Description,
                 FilePath = fileName
             };
-
+            //Add receipt with the correct attributes to the database context
             _context.Receipts.Add(receipt);
             await _context.SaveChangesAsync();
 
             return Ok("Receipt submitted Successfully.");
         }
-    }
+    }//Correct attributes expected to be received 
     public class ReceiptFormModel
     {
         public DateTime Date {get; set;}

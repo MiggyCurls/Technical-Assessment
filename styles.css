@@ -1,3 +1,4 @@
+/*Basic CSS Style*/
 body {
     font-family: Arial, sans-serif;
     background: #F5F5F5;
@@ -32,7 +33,7 @@ form button{
     border: none;
     cursor: pointer;
 }
-
+/*Pseudo class used for hovering over button*/
 form button:hover {
     background-color: #45A049;
 }

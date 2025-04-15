@@ -12,12 +12,13 @@ builder.Services.AddCors(options =>{
 //builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen();//Swagger useful to check if being received at API endpoint
+//Register DBcontext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=receipts.db"));
 
 var app = builder.Build();
-app.UseCors("AllowAll");
+app.UseCors("AllowAll");//Cross-origin resource sharing used to allow sharing of files between servers
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -26,11 +27,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
+
 app.UseAuthorization();
 app.MapControllers();
 
-
+//Default code 
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
